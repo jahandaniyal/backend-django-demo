@@ -9,7 +9,7 @@ from django.utils.http import urlencode
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.test import APIClient
 
-from note.models import User
+from note.models import User, Note, Tag
 
 
 @pytest.fixture
@@ -66,3 +66,13 @@ def reverse_querystring(view, urlconf=None, args=None, kwargs=None, current_app=
 def superuser():
     user = User.objects.create(name='johndoe', password='js.sj', is_superuser=1, is_staff=1)
     return user
+
+
+def create_notes(user_id, title, body, is_private=True, tags=[]):
+    note = Note.objects.create(user_id=user_id, title=title, body=body, is_private=is_private)
+    tag_list = []
+    for tag in tags:
+        tag_obj, _ = Tag.objects.get_or_create(title=tag.get("title"))
+        tag_list.append(tag_obj)
+    note.tags.set(tag_list)
+    return note

@@ -9,7 +9,7 @@ djangorestframework==3.13.1
 djangorestframework-simplejwt==5.1.0
 flake8==4.0.1
 iniconfig==1.1.1
-mccabe==0.6.1
+mccabe==0.7.0
 packaging==21.3
 pluggy==1.0.0
 py==1.11.0

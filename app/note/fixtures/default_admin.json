@@ -1,0 +1,12 @@
+[
+   {
+      "model":"note.user",
+      "pk":1,
+      "fields":{
+         "name":"admin",
+         "password":"pbkdf2_sha256$320000$kWvM0AsnL9BF2c0XTrFE1R$jrINdFBlyNUZLdRrFL+NBHmGMifyD+Bs0jDwG235l1U=",
+         "is_superuser":true,
+         "is_staff":true
+      }
+   }
+]

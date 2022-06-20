@@ -2,7 +2,7 @@ asgiref==3.5.0
 atomicwrites==1.4.0
 attrs==21.4.0
 backports.zoneinfo==0.2.1
-colorama==0.4.4
+colorama==0.4.5
 coverage==6.3.2
 Django==4.0.3
 djangorestframework==3.13.1
